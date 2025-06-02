@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "education": "Estudios",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "text": "Hola, soy Carlos 'Tuto' Curiel, desarrollador web con 1 año de experiencia en:"
+  },
+  "education": {
+    "title": "Estudios",
+    "item1": {
+      "degree": "Bootcamp Desarrollo Web",
+      "institution": "Hack A Boss (2024-2025)"
+    },
+    "item2": {
+      "degree": "Máster en Psicoterapia Humanista",
+      "institution": "Instituto Galene de Psicoterapia"
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "knownTitle": "Lenguajes dominados",
+    "known": ["JavaScript", "HTML5", "CSS", "React", "SQL", "NodeJs"],
+    "learningTitle": "En estudio",
+    "learning": ["TypeScript", "React.js avanzado", "Angular"]
+  },
+  "contact": {
+    "title": "Contacto",
+    "text": "Puedes encontrarme en:"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

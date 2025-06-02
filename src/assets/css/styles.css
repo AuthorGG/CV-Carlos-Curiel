@@ -1,0 +1,486 @@
+/* src/assets/css/styles.css */
+
+/* ================================
+   Reset y box-sizing
+   ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   Variables de colores (paleta)
+   ================================ */
+:root {
+  /* Fondo general */
+  --color-bg: #121212;
+  --color-bg-alt: #1e1e1e;
+  /* Texto */
+  --color-text: #e0e0e0;
+  --color-text-light: #ffffff;
+  /* Acento primario (morado/rosado) */
+  --color-accent: #ff0080;
+  --color-accent-hover: #ff0080;
+  /* Bordes/elementos secundarios */
+  --color-border: #2a2a2a;
+  --color-muted: #4a4a4a;
+}
+
+/* ================================
+   Body y fuente general
+   ================================ */
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -15px;
+  right: -120px;
+  width: 250px;
+  height: 250px;
+  background-image: url("/src/assets/img/1-7d027107-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}
+/* ================================
+   Contenedor principal
+   ================================ */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ================================
+   Navbar
+   ================================ */
+
+.navbar {
+  width: 100%;
+  background-color: var(--color-bg-alt);
+  padding: 0.02px 0 0;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+header.navbar > .container {
+  padding-bottom: 5px;
+
+  padding-top: 0.3rem;
+}
+/* perfil (foto + nombre) */
+.navbar .perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.perfil-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.9s ease;
+}
+
+.perfil-img:hover {
+  transform: rotate(360deg);
+}
+.perfil-text {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.home-logo {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.home-logo-img {
+  width: 60px;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+/* Contenedor principal del navbar */
+.navbar {
+  background-color: #111;
+  padding: 0.5rem 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Estilo base de cada enlace/botón del nav */
+.nav-link {
+  position: relative;
+  background: none;
+  border: none;
+  color: #bbb;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+/* Hover (al pasar el ratón) */
+.nav-link:hover {
+  background-color: rgb(37, 37, 37);
+  border-radius: 10%;
+}
+
+/* Enlace/Botón activo */
+.nav-link.active {
+  color: #fff;
+}
+
+/* Línea fucsia debajo del botón activo */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background-color: #ff0080;
+  border-radius: 2px 2px 0 0;
+}
+
+.nav-link:focus {
+  outline: none;
+}
+
+/* Ejemplo de media query para móvil: reduce gap entre botones si el ancho es pequeño */
+
+/* Selector de idioma */
+div.lang-selector {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.lang-selector button {
+  background: none;
+  border: 1px solid var(--color-text);
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  color: var(--color-text);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-selector button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border-color: var(--color-accent-hover);
+}
+
+.section {
+  width: 100%;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 200px;
+}
+
+/* Títulos de sección */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+/* Texto de sección */
+.section-text {
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 800px;
+  color: var(--color-text);
+}
+
+/* ================================
+   About (Sobre mí)
+   ================================ */
+.about-section {
+  background: linear-gradient(135deg, #1e1e1e 0%, #292929 100%);
+}
+
+/* ================================
+   Educación / Estudios
+   ================================ */
+.education-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.education-list li {
+  background-color: var(--color-bg-alt);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.education-list li strong {
+  color: var(--color-accent);
+}
+
+.education-list li span {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--color-text);
+}
+
+/* ================================
+   Habilidades / Skills
+   ================================ */
+.skills-section {
+  background-color: var(--color-bg);
+}
+
+.skills-list {
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 0;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-bg-alt);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  min-width: 120px;
+  max-width: 140px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.skill-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.skill-name {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+/* ================================
+   Contacto / Contact
+   ================================ */
+.contact-section {
+  background: linear-gradient(135deg, #292929 0%, #1e1e1e 100%);
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.social-list li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.social-list li a:hover {
+  color: var(--color-accent);
+}
+
+/* Íconos de redes */
+.icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* ================================
+   Footer
+   ================================ */
+.footer {
+  width: 100%;
+  background-color: var(--color-bg-alt);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ================================
+   Responsive (adaptaciones móviles)
+   ================================ */
+
+/* 1) Pantallas ≤ 768px */
+@media (max-width: 768px) {
+  /* Navbar: podemos reducir un poco el gap y padding */
+  .navbar {
+    padding: 0.5rem 0; /* Igual que escritorio, o si quieres un poco menos, 0.4rem */
+  }
+  .navbar .container {
+    gap: 0.4rem; /* Reducir ligeramente el gap */
+  }
+  .perfil-img {
+    width: 70px; /* Hacemos la imagen más pequeña */
+    height: 70px;
+  }
+  .perfil-text {
+    font-size: 1.5rem; /* Nombre un poco más pequeño */
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .lang-selector {
+    margin-top: 0.8rem; /* Un poco más de espacio si el menú está en columna */
+  }
+
+  /* Ajustamos scroll-margin-top: restamos altura del header en este ancho (~180px) */
+  .section {
+    scroll-margin-top: 180px;
+  }
+
+  .education-list li,
+  .skill-item {
+    max-width: 90%;
+  }
+  body::after {
+    width: 180px;
+    height: 180px;
+    opacity: 0.06;
+  }
+}
+
+/* 2) Pantallas ≤ 480px */
+@media (max-width: 480px) {
+  /* Navbar se hace aún más compacto */
+  .navbar {
+    padding: 0.4rem 0;
+  }
+  .navbar .container {
+    gap: 0.3rem;
+  }
+  .perfil-img {
+    width: 60px;
+    height: 60px;
+  }
+  .perfil-text {
+    font-size: 1.25rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .nav-list li a {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .lang-selector button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+    margin-left: 0.4rem;
+  }
+  .skill-item {
+    min-width: 100px;
+    max-width: 110px;
+    padding: 0.75rem;
+  }
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .section {
+    scroll-margin-top: 320px;
+  }
+  body::after {
+    width: 120px;
+    height: 120px;
+    opacity: 0.05;
+  }
+}
+@media (max-width: 600px) {
+  .nav-list {
+    gap: 1rem;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  .home-logo-img {
+    width: 60px;
+  }
+}
