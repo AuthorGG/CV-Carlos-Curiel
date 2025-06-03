@@ -7,7 +7,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "text": "Hola, soy Carlos 'Tuto' Curiel, desarrollador web con 1 año de experiencia en:"
+    "text": "Graduado en Psicología con pasión por entender al usuario y su experiencia. Actualmente, soy Desarrollador Web especializado en HTML, CSS, JavaScript y frameworks modernos como React. Me enfoco en crear interfaces accesibles, optimizar rendimiento y mantener código limpio. Siempre en busca de nuevos retos que me permitan seguir creciendo y aportar valor a cada proyecto."
   },
   "education": {
     "title": "Estudios",
@@ -29,7 +29,7 @@
   },
   "contact": {
     "title": "Contacto",
-    "text": "Puedes encontrarme en:"
+    "text": "Contáctame:"
   },
   "footer": {
     "rights": "Todos los derechos reservados."
