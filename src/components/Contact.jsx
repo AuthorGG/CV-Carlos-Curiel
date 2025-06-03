@@ -3,6 +3,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import githubIcon from "../assets/img/icons8-github.svg";
 import linkedinIcon from "../assets/img/linkedin-svgrepo-com.svg";
+import WhatsAppButton from "./WhatsAppButton";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -31,6 +32,9 @@ const Contact = () => {
               <img src={linkedinIcon} alt="LinkedIn" className="icon" />{" "}
               LinkedIn
             </a>
+          </li>
+          <li>
+            <WhatsAppButton />
           </li>
           {/* Agrega más redes o correo si lo deseas */}
         </ul>

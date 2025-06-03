@@ -7,7 +7,7 @@
   },
   "about": {
     "title": "About Me",
-    "text": "Hi, I’m Carlos 'Tuto' Curiel, a web developer with 1 year of experience in..."
+    "text": "Graduated in Psychology with a passion for understanding users and their experiences. I am currently a Full Stack Web Developer specializing in HTML, CSS, JavaScript, and modern frameworks like React. I focus on creating accessible interfaces, optimizing performance, and maintaining clean code. Always seeking new challenges that allow me to continue growing and add value to every project."
   },
   "education": {
     "title": "Education",
@@ -29,7 +29,7 @@
   },
   "contact": {
     "title": "Contact",
-    "text": "You can find me on:"
+    "text": "You can contact me on:"
   },
   "footer": {
     "rights": "All rights reserved."
