@@ -1,8 +1,7 @@
-/* src/assets/css/styles.css */
-
 /* ================================
    Reset y box-sizing
    ================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -19,10 +18,10 @@
   /* Texto */
   --color-text: #e0e0e0;
   --color-text-light: #ffffff;
-  /* Acento primario (morado/rosado) */
+
   --color-accent: #ff0080;
   --color-accent-hover: #ff0080;
-  /* Bordes/elementos secundarios */
+
   --color-border: #2a2a2a;
   --color-muted: #4a4a4a;
 }
@@ -41,6 +40,7 @@ body {
   min-height: 100vh;
   position: relative;
 }
+
 body::after {
   content: "";
   position: fixed;
@@ -56,51 +56,78 @@ body::after {
   pointer-events: none;
   z-index: -1;
 }
-/* ================================
-   Contenedor principal
-   ================================ */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 /* ================================
    Navbar
    ================================ */
-
 .navbar {
   width: 100%;
   background-color: var(--color-bg-alt);
-  padding: 0.02px 0 0;
+  padding: 0;
   border-bottom: 1px solid var(--color-border);
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 10;
 }
 
 .navbar .container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.home-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.home-logo-img {
+  width: 60px;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+/* --- Botones de idioma en la esquina superior derecha --- */
+.lang-selector {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lang-selector button {
+  background: none;
+  border: 1px solid var(--color-text);
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  color: var(--color-text);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-selector button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border-color: var(--color-accent-hover);
+}
+
+/* --- Bloque de perfil --- */
+.perfil {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
-}
-
-header.navbar > .container {
-  padding-bottom: 5px;
-
-  padding-top: 0.3rem;
-}
-/* perfil (foto + nombre) */
-.navbar .perfil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
+  width: 100%;
 }
 
 .perfil-img {
@@ -118,41 +145,36 @@ header.navbar > .container {
 .perfil-img:hover {
   transform: rotate(360deg);
 }
+
 .perfil-text {
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-text);
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
-
-.home-logo {
-  align-self: flex-start;
-  margin-bottom: 1rem;
+header .navbar {
+  width: 100vh !important;
 }
-
-.home-logo-img {
-  width: 60px;
-  height: auto;
-  display: block;
-  border-radius: 50%;
-}
-/* Contenedor principal del navbar */
-.navbar {
-  background-color: #111;
-  padding: 0.5rem 1rem;
+/* --- Menú de navegación --- */
+nav {
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .nav-list {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* Estilo base de cada enlace/botón del nav */
 .nav-link {
+  display: inline-block;
   position: relative;
   background: none;
   border: none;
@@ -163,22 +185,18 @@ header.navbar > .container {
   border-radius: 0.25rem;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.2s;
-  white-space: nowrap;
+  transition: color 0.2s, background-color 0.2s ease;
 }
 
-/* Hover (al pasar el ratón) */
 .nav-link:hover {
   background-color: rgb(37, 37, 37);
-  border-radius: 10%;
+  border-radius: 0.25rem;
 }
 
-/* Enlace/Botón activo */
 .nav-link.active {
   color: #fff;
 }
 
-/* Línea fucsia debajo del botón activo */
 .nav-link.active::after {
   content: "";
   position: absolute;
@@ -186,54 +204,57 @@ header.navbar > .container {
   bottom: -2px;
   width: 100%;
   height: 3px;
-  background-color: #ff0080;
+  background-color: var(--color-accent);
   border-radius: 2px 2px 0 0;
 }
 
 .nav-link:focus {
   outline: none;
 }
-
-/* Ejemplo de media query para móvil: reduce gap entre botones si el ancho es pequeño */
-
-/* Selector de idioma */
-div.lang-selector {
-  margin-top: 0.5rem;
-  padding-top: 0;
-  margin-top: 0.8rem;
-  margin-bottom: 0;
-  padding-bottom: 0;
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-.lang-selector button {
-  background: none;
-  border: 1px solid var(--color-text);
-  margin-left: 0.5rem;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 0.25rem;
-  color: var(--color-text);
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0080;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
-.lang-selector button:hover {
-  background-color: var(--color-accent);
-  color: var(--color-text-light);
-  border-color: var(--color-accent-hover);
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
+/* ================================
+   Secciones generales 
+   ================================ */
 .section {
   width: 100%;
-  padding: 0.2rem 0;
-  border-bottom: 1px solid var(--color-border);
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: var(--color-bg-alt);
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   scroll-margin-top: 200px;
 }
 
-/* Títulos de sección */
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -241,7 +262,6 @@ div.lang-selector {
   color: var(--color-text-light);
 }
 
-/* Texto de sección */
 .section-text {
   margin-top: 1rem;
   text-align: center;
@@ -249,13 +269,98 @@ div.lang-selector {
   color: var(--color-text);
 }
 
-/* ================================
-   About (Sobre mí)
-   ================================ */
-.about-section {
-  background: linear-gradient(135deg, #1e1e1e 0%, #292929 100%);
+.projects-section {
+  padding: 2rem;
+  background-color: #111;
+  color: #fff;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ff0080;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+.project-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+
+  box-shadow: 0 6px 20px rgba(255, 0, 128, 0.4);
+}
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.project-links a {
+  color: #ff0080;
+  margin-right: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: #ff0080;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+  background-color: #e60073;
+}
+.project-image {
+  width: 100%;
+  height: 180px; /* Puedes ajustar según tu diseño */
+  object-fit: cover; /* Cubre el contenedor manteniendo proporción */
+  object-position: center; /* Centra visualmente el contenido */
+  border-bottom: 2px solid #ff0080;
+}
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  text-align: justify;
+  padding: 1rem;
+  white-space: pre-line; /* respeta los saltos de línea de la traducción */
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.resaltado {
+  color: #ff0080;
+  font-weight: bold;
+}
+.resaltado2 {
+  font-size: x-large;
+  color: #ff0080;
+  font-weight: bolder;
+}
 /* ================================
    Educación / Estudios
    ================================ */
@@ -266,10 +371,11 @@ div.lang-selector {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .education-list li {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-bg);
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   width: 100%;
@@ -291,29 +397,26 @@ div.lang-selector {
 /* ================================
    Habilidades / Skills
    ================================ */
-.skills-section {
-  background-color: var(--color-bg);
-}
-
 .skills-list {
   list-style: none;
   margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  justify-content: center;
+  justify-items: center;
   padding: 0;
+  width: 100%;
 }
 
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
   padding: 1rem;
   border-radius: 0.75rem;
-  min-width: 120px;
-  max-width: 140px;
+  width: 100%;
+  max-width: 200px;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -330,20 +433,37 @@ div.lang-selector {
   text-align: center;
   color: var(--color-text-light);
 }
+.skills-subtitle {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+  text-align: center;
+}
+.skills-group:nth-of-type(2) .skills-subtitle {
+  margin-top: 2.5rem; /* o el valor que se vea bien alineado */
+}
+.skills-list.learning-list .skill-item {
+  background-color: rgba(255, 0, 128, 0.1);
+  border: 1px dashed #ff0080;
+  border-radius: 8px;
+  padding: 1rem;
+}
 
+.skill-name.learning {
+  color: #ff0080;
+  font-style: italic;
+}
 /* ================================
    Contacto / Contact
    ================================ */
-.contact-section {
-  background: linear-gradient(135deg, #292929 0%, #1e1e1e 100%);
-}
-
 .social-list {
   list-style: none;
   display: flex;
   gap: 2rem;
   margin-top: 1.5rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .social-list li a {
@@ -359,13 +479,11 @@ div.lang-selector {
   color: var(--color-accent);
 }
 
-/* Íconos de redes */
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   margin-right: 0.5rem;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
-  display: block;
 }
 
 /* ================================
@@ -373,6 +491,8 @@ div.lang-selector {
    ================================ */
 .footer {
   width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
   background-color: var(--color-bg-alt);
   padding: 1.5rem 0;
   text-align: center;
@@ -382,44 +502,52 @@ div.lang-selector {
 }
 
 /* ================================
-   Responsive (adaptaciones móviles)
+   Responsive
    ================================ */
 
-/* 1) Pantallas ≤ 768px */
 @media (max-width: 768px) {
-  /* Navbar: podemos reducir un poco el gap y padding */
-  .navbar {
-    padding: 0.5rem 0; /* Igual que escritorio, o si quieres un poco menos, 0.4rem */
-  }
+  /* Navbar */
   .navbar .container {
-    gap: 0.4rem; /* Reducir ligeramente el gap */
+    padding-top: 3rem;
+    padding-bottom: 1rem;
   }
   .perfil-img {
-    width: 70px; /* Hacemos la imagen más pequeña */
+    width: 70px;
     height: 70px;
   }
   .perfil-text {
-    font-size: 1.5rem; /* Nombre un poco más pequeño */
+    font-size: 1.5rem;
   }
+  /* Menú vertical en mobile */
   .nav-list {
     flex-direction: column;
     gap: 1.2rem;
     width: 100%;
     align-items: center;
   }
-
   .lang-selector {
-    margin-top: 0.8rem; /* Un poco más de espacio si el menú está en columna */
+    top: 0.75rem;
+    right: 0.75rem;
   }
-
-  /* Ajustamos scroll-margin-top: restamos altura del header en este ancho (~180px) */
+  /* Secciones más estrechas en tablet/móvil */
   .section {
-    scroll-margin-top: 180px;
+    margin: 1rem auto;
+    padding: 1.5rem 1rem;
   }
-
-  .education-list li,
+  /* Educación en una sola columna */
+  .education-list {
+    gap: 0.75rem;
+  }
+  .education-list li {
+    max-width: 100%;
+  }
+  /* Grid de skills */
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
   .skill-item {
-    max-width: 90%;
+    max-width: 180px;
   }
   body::after {
     width: 180px;
@@ -428,14 +556,10 @@ div.lang-selector {
   }
 }
 
-/* 2) Pantallas ≤ 480px */
 @media (max-width: 480px) {
-  /* Navbar se hace aún más compacto */
-  .navbar {
-    padding: 0.4rem 0;
-  }
   .navbar .container {
-    gap: 0.3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
   }
   .perfil-img {
     width: 60px;
@@ -447,26 +571,37 @@ div.lang-selector {
   .section-title {
     font-size: 2rem;
   }
-  .nav-list li a {
-    padding: 0.3rem 0.5rem;
-    font-size: 0.95rem;
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .lang-selector {
+    top: 0.5rem;
+    right: 0.5rem;
   }
   .lang-selector button {
     padding: 0.3rem 0.6rem;
     font-size: 0.85rem;
-    margin-left: 0.4rem;
+  }
+  .education-list li {
+    padding: 0.75rem 1rem;
+  }
+  /* Grid de skills  */
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
   .skill-item {
-    min-width: 100px;
-    max-width: 110px;
+    max-width: 100%;
     padding: 0.75rem;
   }
   .skill-name {
     font-size: 0.9rem;
   }
-
+  /* Secciones más estrechas en móvil */
   .section {
-    scroll-margin-top: 320px;
+    margin: 1rem auto;
+    padding: 1rem;
   }
   body::after {
     width: 120px;
@@ -474,6 +609,7 @@ div.lang-selector {
     opacity: 0.05;
   }
 }
+
 @media (max-width: 600px) {
   .nav-list {
     gap: 1rem;

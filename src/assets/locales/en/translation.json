@@ -1,13 +1,14 @@
 {
   "nav": {
     "about": "About Me",
+    "projects": "Projects",
     "education": "Education",
     "skills": "Skills",
     "contact": "Contact"
   },
   "about": {
     "title": "About Me",
-    "text": "Graduated in Psychology with a passion for understanding users and their experiences. I am currently a Full Stack Web Developer specializing in HTML, CSS, JavaScript, and modern frameworks like React. I focus on creating accessible interfaces, optimizing performance, and maintaining clean code. Always seeking new challenges that allow me to continue growing and add value to every project."
+    "text": "<3>Hey! I'm Carlos Curiel, </3> a former psychotherapist and music therapist turned <1>web developer </1>, with a deep interest in human behavior and a passion for building useful, meaningful digital experiences.\n\nFor years, I dedicated myself to helping people understand and transform their lives through psychology, working closely with individuals in therapeutic contexts. That background has given me a strong foundation in empathy, active listening, and problem-solving – skills I now channel into tech.\n\nAt some point, I realized I wanted to explore another way to solve problems: through code. I joined a full-time web development bootcamp, where I learned to build full-stack applications using <2>JavaScript, React, Node.js, Express, and SQL.</2> It was like therapy – but for the web.\n\nI’m especially drawn to frontend development and the logic behind it, I also enjoy creating clean, accessible UIs. I’ve worked on projects like a rental management platform  and a responsive CV site built with Vite.\n\n<2>Right now, I’m focused on improving my skills, contributing to open-source projects, and looking for my first opportunity in tech.</2>\n\n I'm driven by curiosity, discipline, and a love for turning abstract ideas into real, interactive products.\n\nThanks for reading – feel free to check out my projects!"
   },
   "education": {
     "title": "Education",
@@ -33,5 +34,28 @@
   },
   "footer": {
     "rights": "All rights reserved."
+  },
+
+  "projects": {
+    "title": "Projects",
+    "repo": "Repository",
+    "demo": "Demo",
+    "list": [
+      {
+        "title": "ClickAlquiler – Final Bootcamp Project",
+        "description": "Rental management app. Includes login, user history, Google Maps and a booking system.",
+        "tech": ["React", "Node.js", "Express", "SQL", "CSS"]
+      },
+      {
+        "title": "Hangman Game",
+        "description": "Classic hangman game built in React. Minimalist and responsive design.",
+        "tech": ["HTML", "JavaScript", "CSS"]
+      },
+      {
+        "title": "CV Carlos Curiel",
+        "description": "Interactive CV built with Vite + React. Responsive SPA-style navigation.",
+        "tech": ["React", "Vite", "CSS"]
+      }
+    ]
   }
 }

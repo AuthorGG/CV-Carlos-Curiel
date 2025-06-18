@@ -9,36 +9,33 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="section contact-section">
-      <div className="container">
-        <h2 className="section-title">{t("contact.title")}</h2>
-        <p className="section-text">{t("contact.text")}</p>
-        <ul className="social-list">
-          <li>
-            <a
-              href="https://github.com/AuthorGG"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={githubIcon} alt="GitHub" className="icon" /> GitHub
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/carlos-curiel-66bb1b105/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={linkedinIcon} alt="LinkedIn" className="icon" />{" "}
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <WhatsAppButton />
-          </li>
-          {/* Agrega más redes o correo si lo deseas */}
-        </ul>
-      </div>
+    <section id="contact" className="section">
+      <h2 className="section-title">{t("contact.title")}</h2>
+      <p className="section-text">{t("contact.text")}</p>
+      <ul className="social-list">
+        <li>
+          <a
+            href="https://github.com/AuthorGG"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={githubIcon} alt="GitHub" className="icon" /> GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/carlos-curiel-66bb1b105/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedinIcon} alt="LinkedIn" className="icon" /> LinkedIn
+          </a>
+        </li>
+        <li>
+          <WhatsAppButton />
+        </li>
+        {/*  más redes */}
+      </ul>
     </section>
   );
 };

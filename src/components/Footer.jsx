@@ -8,11 +8,9 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container">
-        <p>
-          &copy; {year} Carlos Augusto Curiel Ramos. {t("footer.rights")}
-        </p>
-      </div>
+      <p>
+        &copy; {year} Carlos Augusto Curiel Ramos. {t("footer.rights")}
+      </p>
     </footer>
   );
 };
