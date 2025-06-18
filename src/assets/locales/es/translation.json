@@ -1,13 +1,14 @@
 {
   "nav": {
     "about": "Sobre mí",
+    "projects": "Proyectos",
     "education": "Estudios",
     "skills": "Habilidades",
     "contact": "Contacto"
   },
   "about": {
     "title": "Sobre mí",
-    "text": "Graduado en Psicología con pasión por entender al usuario y su experiencia. Actualmente, soy Desarrollador Web especializado en HTML, CSS, JavaScript y frameworks modernos como React. Me enfoco en crear interfaces accesibles, optimizar rendimiento y mantener código limpio. Siempre en busca de nuevos retos que me permitan seguir creciendo y aportar valor a cada proyecto."
+    "text": "<3>¡Hola! Soy Carlos Curiel</3> , un expsicoterapeuta y musicoterapeuta reconvertido en <1>desarrollador web</1>, con un gran interés por el comportamiento humano y una pasión por crear experiencias digitales útiles y significativas.\n\nDurante años me dediqué a acompañar procesos personales en contextos terapéuticos, ayudando a las personas a comprender y transformar sus vidas. Esa experiencia me dejó una base sólida en empatía, escucha activa y resolución de problemas, habilidades que hoy canalizo hacia el mundo de la tecnología.\n\nEn un momento clave, me di cuenta de que también quería resolver problemas desde otro lugar: programando. Así fue como me sumé a un bootcamp intensivo de desarrollo web, donde aprendí a crear aplicaciones full stack con tecnologías como <2>JavaScript, React, Node.js, Express y SQL.</2> Para mí, fue como hacer terapia… pero al servicio de la web.\n\nMe siento especialmente cómodo trabajando en el Frontend y en la lógica detrás de todo el funcionamiento, aunque también disfruto diseñar interfaces limpias y accesibles. Algunos de mis proyectos incluyen una plataforma de gestión de alquileres  y un CV interactivo desarrollado con Vite.\n\n<2>Actualmente, estoy centrado en seguir aprendiendo, contribuir a proyectos open source y buscando mi primera oportunidad laboral en el mundo tech.</2>\n\n Me mueve la curiosidad, la disciplina y las ganas de convertir ideas abstractas en productos interactivos reales.\n\n¡Gracias por leerme! Te invito a echar un vistazo a mis proyectos."
   },
   "education": {
     "title": "Estudios",
@@ -33,5 +34,27 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "repo": "Repositorio",
+    "demo": "Demo",
+    "list": [
+      {
+        "title": "ClickAlquiler – Proyecto Final Bootcamp",
+        "description": "App web para gestión de alquileres. Incluye login, historial de usuarios, Google Maps y sistema de reservas.",
+        "tech": ["React", "Node.js", "Express", "SQL", "CSS"]
+      },
+      {
+        "title": "Juego del Ahorcado",
+        "description": "Juego clásico del ahorcado desarrollado en React. Estilo minimalista y responsivo.",
+        "tech": ["HTML", "JavaScript", "CSS"]
+      },
+      {
+        "title": "CV Carlos Curiel",
+        "description": "CV interactivo hecho con Vite + React. Diseño responsive y navegación tipo SPA.",
+        "tech": ["React", "Vite", "CSS"]
+      }
+    ]
   }
 }
