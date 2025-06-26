@@ -1,4 +1,4 @@
-Descripción del Proyecto
+Descripción del Proyecto:
 Este CV Web es una página de presentación profesional que combina un diseño oscuro, tipografía legible y elementos interactivos para brindar una experiencia de usuario moderna. Está pensada para desarrolladores web que desean mostrar:
 
 Una foto de perfil circular con animación al pasar el cursor.
