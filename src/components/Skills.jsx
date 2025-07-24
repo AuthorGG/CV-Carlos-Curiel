@@ -40,7 +40,7 @@ const Skills = () => {
       animationData: sqlAnimation,
     },
   ];
-
+  const softSkills = t("skills.SoftSkillsList", { returnObjects: true });
   const learningTechs = [
     { name: "TypeScript", animationData: tsAnimation },
     { name: "Advanced React.js", animationData: reactAnimation },
@@ -82,6 +82,14 @@ const Skills = () => {
                 speed={1}
               />
               <span className="skill-name learning">{tech.name}</span>
+            </li>
+          ))}
+        </ul>
+        <h3 className="skills-subtitle">{t("skills.SoftSkillsTitle")}</h3>
+        <ul className="soft-skills-list">
+          {softSkills.map((skill, index) => (
+            <li key={index} className="soft-skill-item">
+              {skill}
             </li>
           ))}
         </ul>

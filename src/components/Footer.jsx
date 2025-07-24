@@ -1,5 +1,3 @@
-// src/components/Footer.jsx
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -8,9 +6,8 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <p>
-        &copy; {year} Carlos Augusto Curiel Ramos. {t("footer.rights")}
-      </p>
+      <p>© 2025 Carlos Augusto Curiel Ramos. {t("footer.text")}</p>
+      <p className="footer-tech">{t("footer.madeWith")}</p>
     </footer>
   );
 };
