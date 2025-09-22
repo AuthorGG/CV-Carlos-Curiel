@@ -31,6 +31,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+
       <main>
         <Routes>
           <Route path="/" element={<Navigate to="/about" replace />} />

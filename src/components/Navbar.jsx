@@ -12,8 +12,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="navbar">
-      <div className="container">
+    <div className="navbar-container">
+      <header className="navbar">
         <div className="home-logo">
           <NavLink to="/">
             <img src={logo} alt="Logo" className="home-logo-img" />
@@ -87,8 +87,8 @@ const Navbar = () => {
           <button onClick={() => changeLanguage("es")}>ES</button>
           <button onClick={() => changeLanguage("en")}>EN</button>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 

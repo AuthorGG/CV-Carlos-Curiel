@@ -9,10 +9,10 @@ i18n.use(initReactI18next).init({
     en: { translation: enTranslation },
     es: { translation: esTranslation },
   },
-  lng: "es", // idioma predeterminado al cargar
-  fallbackLng: "es", // en caso de que falte alguna clave
+  lng: "es",
+  fallbackLng: "es",
   interpolation: {
-    escapeValue: false, // React ya escapa por defecto
+    escapeValue: false,
   },
 });
 
