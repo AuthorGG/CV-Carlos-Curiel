@@ -21,18 +21,18 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install dependencies 📦
         run: npm install
 
-      - name: Build 🏗️
+      - name: Build project 🏗️
         run: npm run build
 
-      - name: Set Git config ⚙️
+      - name: Configure Git for deploy ⚙️
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy to gh-pages 🚀
+      - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
