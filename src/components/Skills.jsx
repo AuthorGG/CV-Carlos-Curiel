@@ -17,6 +17,7 @@ const Skills = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    console.log("AVER");
     const root = sectionRef.current;
     if (!root) return;
 
@@ -27,10 +28,11 @@ const Skills = () => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
             e.target.classList.add("is-in");
-            obs.unobserve(e.target); // anima SOLO la primera vez
+            obs.unobserve(e.target);
           }
         });
       },
+
       {
         root: null,
         rootMargin: "0px 0px -10% 0px",
