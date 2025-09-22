@@ -53,7 +53,7 @@ body::after {
   right: -120px;
   width: 250px;
   height: 250px;
-  background-image: url("/src/assets/img/1-7d027107-removebg-preview.png");
+  background-image: url("../img/1-7d027107-removebg-preview.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -550,7 +550,7 @@ nav {
   text-align: center;
 }
 .skills-group:nth-of-type(2) .skills-subtitle {
-  margin-top: 2.5rem; /* o el valor que se vea bien alineado */
+  margin-top: 2.5rem;
 }
 .skills-list.learning-list .skill-item {
   background-color: rgba(255, 0, 128, 0.1);
@@ -690,7 +690,7 @@ nav {
 @media (max-width: 1040px) {
   .navbar .container,
   .footer {
-    width: calc(100% - 32px); /* ocupa casi todo, sin desbordar */
+    width: calc(100% - 32px);
     max-width: 1000px;
     padding-left: 16px;
     padding-right: 16px;
