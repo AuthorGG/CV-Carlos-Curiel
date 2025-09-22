@@ -17,7 +17,7 @@ const Skills = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    console.log("AVER");
+    console.log("AVE R");
     const root = sectionRef.current;
     if (!root) return;
 
