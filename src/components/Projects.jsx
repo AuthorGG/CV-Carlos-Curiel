@@ -4,12 +4,13 @@ import alquilerMiniatura from "../assets/img/screenshotas.png";
 import pomodoit from "../assets/img/pomodoit.png";
 import ahorcadoimg from "../assets/img/ahorcadoportada.png";
 import cvimage from "../assets/img/portada-cv.png";
-
+import storeimage from "../assets/img/store.png";
 const imageMap = {
   clickalquiler: alquilerMiniatura,
   pomodoit: pomodoit,
   ahorcado: ahorcadoimg,
   cv: cvimage,
+  store: storeimage,
 };
 
 const Projects = () => {

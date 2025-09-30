@@ -53,6 +53,22 @@
         "repo": "https://github.com/AuthorGG/PFB"
       },
       {
+        "imageKey": "store",
+        "title": "TC LOFI STORE",
+        "description": "E-commerce demo with Next.js (App Router): product catalog, SSR product detail, ISR listing, shopping cart with Context API, animations with Framer Motion, and Web Vitals metrics.",
+        "tech": [
+          "React",
+          "Vercel",
+          "Next.js",
+          "Framer Motion",
+          "ISR",
+          "SSR",
+          "Dynamic imports"
+        ],
+        "repo": "https://github.com/AuthorGG/pomodoit",
+        "demo": "https://github.com/AuthorGG/nextjs-tc-lofi-store"
+      },
+      {
         "imageKey": "pomodoit",
         "title": "PomoDoIt!",
         "description": "Pomodoro timer built with React, with external libraries and deployed on Vercel. Minimalistic and responsive design.",
