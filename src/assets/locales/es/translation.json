@@ -65,7 +65,7 @@
           "Dynamic imports"
         ],
         "repo": "https://github.com/AuthorGG/pomodoit",
-        "demo": "https://github.com/AuthorGG/nextjs-tc-lofi-store"
+        "demo": "https://nextjs-tc-lofi-store.vercel.app/"
       },
       {
         "imageKey": "pomodoit",
